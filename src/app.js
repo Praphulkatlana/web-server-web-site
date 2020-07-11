@@ -3,6 +3,7 @@ const path=require('path')
 const hbs=require('hbs')
 const latlong=require('./ult/latlong')
 const forecast=require('./ult/forecast')
+const port= process.env.PORT || 3000 //heroku port || use if fail
 
 
 const directory=path.join(__dirname,'../Public')
@@ -90,6 +91,6 @@ app.get('*',(req,resp)=>{
 // })
 
 
-app.listen(3000,()=>{
+app.listen(port,()=>{
     console.log('server is successfully restarted')
 })
