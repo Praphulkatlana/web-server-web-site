@@ -13,7 +13,8 @@ const forecast=(latitude,longitude,location,callback)=>{
             if (location_obj['name'] ==null){
                 name=location
             }
-            callback(undefined,`In `+name+` Current temperature is `+body.current.temperature+` degree`)
+            callback(undefined,`In `+name+` current temperature is `+body.current.temperature+` degree. It feels like`+
+            body.current.feelslike+` degre. The humidity is `+body.current.humidity)
         }
     })
 }
