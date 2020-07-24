@@ -6,7 +6,8 @@ element_two.innerText=""
 btn.addEventListener('click',()=>{
     element_one.innerText="loading.."
     element_two.innerText=""
-const val= document.getElementById("myText").value;
+   var val= document.getElementById("myText").value;
+   val=val.replace(/^\s+|\s+$/gm,'');
     console.log('clk')
     console.log(val)
     // fetch(`http://localhost:3000/weather?address=${val}`).then((response)=>{
